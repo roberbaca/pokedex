@@ -1,0 +1,36 @@
+$size: 45px;
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card { 
+    width: 12rem;  
+    height: 20rem;  
+    margin: 0;
+    padding: 30px 20px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: radial-gradient(circle at 50% 0%, red 36%, #ffffff 36%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .card__pokeimg {
+        width: 100%;
+    }
+
+    .card__pokeimg img {
+        width: 100%;
+        image-rendering: pixelated;
+        object-fit:cover;
+        transform: scale(1.8);
+       
+    }
+
+    .card__pokename {
+        text-align: center;
+        font-weight: 600;
+      }
+}
