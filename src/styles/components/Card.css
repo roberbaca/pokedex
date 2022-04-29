@@ -1,19 +1,73 @@
+/*
+
+Colors:
+	Body 		: #333
+	Headers 	: #2B2D42
+	Primary 	: #D10024
+	Dark 		: #15161D ##1E1F29
+	Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
+
+Fonts: Montserrat
+
+*/
+/*-----------------
+	Typography
+-------------------*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grass {
+  background: radial-gradient(circle at 50% 0%, #00b894 36%, #ffffff 36%);
+}
+
+.fire {
+  background: radial-gradient(circle at 50% 0%, #f0932b 36%, #ffffff 36%);
+}
+
+.water {
+  background: radial-gradient(circle at 50% 0%, #0190FF 36%, #ffffff 36%);
+}
+
+.bug {
+  background: radial-gradient(circle at 50% 0%, #26de81 36%, #ffffff 36%);
 }
 
 .card {
-  width: 12rem;
-  height: 20rem;
-  margin: 0;
+  width: 8rem;
+  height: 12rem;
+  margin: 1rem;
   padding: 30px 20px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  background: radial-gradient(circle at 50% 0%, red 36%, #ffffff 36%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.card p {
+  margin: 0;
+  padding: 0.5rem;
+  text-transform: uppercase;
 }
 .card .card__pokeimg {
   width: 100%;
@@ -22,11 +76,40 @@
   width: 100%;
   image-rendering: pixelated;
   object-fit: cover;
-  transform: scale(1.8);
+  transform: scale(1.5);
 }
 .card .card__pokename {
   text-align: center;
   font-weight: 600;
+}
+.card .card__button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+}
+.card .card__button:hover {
+  cursor: pointer;
+}
+.card .card__poketypecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card__poketypecontainer p {
+  color: white;
+  border-radius: 5px;
+  font-size: 0.6rem;
+  width: 5rem;
+}
+.card .card__poketype--grass {
+  background-color: #00b894;
+}
+.card .card__poketype--fire {
+  background-color: #f0932b;
 }
 
 /*# sourceMappingURL=Card.css.map */
