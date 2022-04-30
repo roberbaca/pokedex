@@ -1,0 +1,39 @@
+@use "../Global";
+
+footer {
+    background-color: Global.$pika-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top: 3px solid;
+    border-color: Global.$main-color;
+
+    .footer__logo {
+        width: 3rem;
+    }
+
+    .footer__socialicon {
+        font-size: 3rem;
+        color: Global.$main-color;
+        transition: ease-in-out 0.5s;
+    }
+
+    .footer__socialicon:hover {
+        font-size: 3rem;
+        color: white;
+        transition: ease-in-out 0.5s;
+    }
+
+
+    .footer__copy {
+        font-weight: 400;
+    }
+
+    span {
+        font-weight: bold;
+    }
+}

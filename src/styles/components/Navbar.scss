@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 7rem;
+    height: 5rem;
     border-bottom: 3px solid;
     border-color: Global.$main-color;
     padding-left: 2rem;
@@ -24,19 +24,21 @@
         justify-content: center;
         align-items: center;
         width: 40rem;
+       
 
-        .searchbar__select {
-            padding: 0px 15px;
-            background: #FFF;
-            border: 1px solid #E4E7ED;
-            height: 40px;
-            border-radius: 40px 0px 0px 40px;            
-        }
+        // .searchbar__select {
+        //     padding: 0px 15px;
+        //     background: #FFF;
+        //     border: 1px solid #E4E7ED;
+        //     height: 40px;
+        //     border-radius: 40px 0px 0px 40px;            
+        // }
 
         .searchbar__input {
             height: 38px;
             padding: 0px 15px;
-            border: 1px solid #E4E7ED;
+            border: 1px solid #FFF;
+            border-radius: 40px 0px 0px 40px;
             background-color: #FFF;
             width: 100%;
         }
@@ -44,14 +46,14 @@
         .searchbar__button {
             height: 38px;
             width: 100px;
-            background: #D10024;
+            background: Global.$main-color;
             color: #FFF;
             font-weight: 800;
             border: none;
             border-radius: 0px 40px 40px 0px;
             padding: 12px 12px 30px;
             text-align: center;
-            -webkit-transition: 0.2
+            // -webkit-transition: 0.2
         }
 
         .searchbar__button:hover {

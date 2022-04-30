@@ -1,32 +1,106 @@
+@use "../Global";
+
 .modal__card {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 0;
+    background-color: white;   
     z-index: 1000;
     width: 20rem;
-    height: 40rem;
-    padding: 0.5rem;
+    height: 35rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+    .modal__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid;
+        border-color: black;
+        padding-bottom: 0.5rem;    
+        margin-bottom: 2rem;
+        width: 100%;
+    
+        .modal__title {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+    
+        .modal__button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+
+        .modal__button:hover {
+            color: red;
+            cursor: pointer;
+            
+        }
+    
+    }
+
+    .modal__infocontainer {
+        
+        .modal__namecontainer {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(223,228,234);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+
+            .modal__name {
+                font-size: 2rem;
+                font-weight: bold;
+                margin: 0;
+                
+            }
+    
+            .modal__img {
+                width: 8rem;
+            }
+        }
+
+        .modal__description {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-color: Global.$pika-color;
+            border-radius: 0.5rem;  
+            padding: 0.5rem;
+        }
+
+        .modal__stats {
+            // border: 1px solid;
+            // border-color: black;
+            // border-radius: 0.5rem;
+            // padding: 0.5rem;
+            .modal__measures {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+            }
+
+            .modal__statstitle {
+                color: grey;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid;
+                border-color: grey;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 
-.modal__header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid;
-    border-color: black;
-    padding-bottom: 0.5rem;    
-    width: 100%;
-
-    .modal__title {
-        margin: 0;
-    }
-
-    .modal__button {
-
-    }
-}

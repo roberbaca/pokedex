@@ -3,16 +3,6 @@ import ReactDom from 'react-dom'
 import '../../styles/components/Modal.css';
 import '../../styles/Global.css';
 
-const MODAL_STYLES = {
-  position: 'fixed',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  backgroundColor: '#FFF',
-  padding: '50px',
-  zIndex: 1000
-}
-
 const OVERLAY_STYLES = {
   position: 'fixed',
   top: 0,
@@ -35,31 +25,9 @@ export default function Modal({ open, children, onClose }) {
           <button onClick={onClose} className='modal__button'>x</button>
         </div>
 
-        <div className='modal__description'>
-          
-        </div>
-        {/* </div>
-            <p>HT</p>
-            <p>WT</p>
-        <div>
-
-        </div>
-        <div className='modal__statistics'>
-          <div>
-            <p>Attack</p>
-            <p>Defense</p>
-            <p>Sp. Atk</p>
-            <p>Sp. Def</p>
-            <p>Sp. Speed</p>
-          </div> */}
-
-    
-        
-        
-
-
-
+        <div className='modal__infocontainer'>
         {children}
+        </div>    
       </div>
     </>,
     document.getElementById('portal')

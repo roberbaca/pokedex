@@ -6,20 +6,68 @@
     flex-wrap: wrap;
 }
 
-.grass {
-    background: radial-gradient(circle at 50% 0%, Global.$grass 36%, #ffffff 36%);  
+.bug {
+    background: radial-gradient(circle at 50% 0%, Global.$bug 36%, #ffffff 36%);  
+}
+
+.dragon {
+    background: radial-gradient(circle at 50% 0%, Global.$dragon 36%, #ffffff 36%);  
+}
+
+.electric {
+    background: radial-gradient(circle at 50% 0%, Global.$electric 36%, #ffffff 36%);  
+}
+
+.fairy {
+    background: radial-gradient(circle at 50% 0%, Global.$fairy 36%, #ffffff 36%);  
+}
+
+.fighting {
+    background: radial-gradient(circle at 50% 0%, Global.$fighting 36%, #ffffff 36%);  
 }
 
 .fire {
     background: radial-gradient(circle at 50% 0%, Global.$fire 36%, #ffffff 36%);  
 }
 
-.water {
-    background: radial-gradient(circle at 50% 0%, Global.$water 36%, #ffffff 36%);  
+.flying {
+    background: radial-gradient(circle at 50% 0%, Global.$flying 36%, #ffffff 36%);  
 }
 
-.bug {
-    background: radial-gradient(circle at 50% 0%, Global.$bug 36%, #ffffff 36%);  
+.grass {
+    background: radial-gradient(circle at 50% 0%, Global.$grass 36%, #ffffff 36%);  
+}
+
+.ground {
+    background: radial-gradient(circle at 50% 0%, Global.$ground 36%, #ffffff 36%);  
+}
+
+.ghost {
+    background: radial-gradient(circle at 50% 0%, Global.$ghost 36%, #ffffff 36%);  
+}
+
+.ice {
+    background: radial-gradient(circle at 50% 0%, Global.$ice 36%, #ffffff 36%);  
+}
+
+.normal {
+    background: radial-gradient(circle at 50% 0%, Global.$normal 36%, #ffffff 36%);  
+}
+
+.poison {
+    background: radial-gradient(circle at 50% 0%, Global.$poison 36%, #ffffff 36%);  
+}
+
+.psychic {
+    background: radial-gradient(circle at 50% 0%, Global.$psychic 36%, #ffffff 36%);  
+}
+
+.rock {
+    background: radial-gradient(circle at 50% 0%, Global.$rock 36%, #ffffff 36%);  
+}
+
+.water {
+    background: radial-gradient(circle at 50% 0%, Global.$water 36%, #ffffff 36%);  
 }
 
 .card { 
@@ -45,7 +93,7 @@
     .card__pokenumber {
         color: black;
         font-weight: 900;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin: 0;
         // margin-top: 1rem;
         // margin-right: 1rem;
@@ -125,8 +173,6 @@
         transition: all 0.3s ease-out;
     }
 
-
-
     .card__poketypecontainer {
         display: flex;
         justify-content: center;
@@ -204,6 +250,38 @@
     }
 }
 
-.card:hover {
-   
+
+.page__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .page__number {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 2rem;
+        box-sizing: border-box;
+        width: 7rem;
+    }
+
+    .page__button {
+        background-color: Global.$pika-color;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 100;
+        box-sizing: border-box;
+        width: 7rem;
+        padding: 0.5rem;
+        transition: ease-in-out 0.3s;
+    }
+    
+    .page__button:hover {
+        cursor: pointer;
+        background-color: Global.$main-color;
+        color: white;
+        transition: ease-in-out 0.3s;
+    }
+    
 }
+

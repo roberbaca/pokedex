@@ -37,20 +37,68 @@ a {
   flex-wrap: wrap;
 }
 
-.grass {
-  background: radial-gradient(circle at 50% 0%, #00b894 36%, #ffffff 36%);
+.bug {
+  background: radial-gradient(circle at 50% 0%, #26de81 36%, #ffffff 36%);
+}
+
+.dragon {
+  background: radial-gradient(circle at 50% 0%, #ffeaa7 36%, #ffffff 36%);
+}
+
+.electric {
+  background: radial-gradient(circle at 50% 0%, #fed330 36%, #ffffff 36%);
+}
+
+.fairy {
+  background: radial-gradient(circle at 50% 0%, #FF0069 36%, #ffffff 36%);
+}
+
+.fighting {
+  background: radial-gradient(circle at 50% 0%, #30336b 36%, #ffffff 36%);
 }
 
 .fire {
   background: radial-gradient(circle at 50% 0%, #f0932b 36%, #ffffff 36%);
 }
 
-.water {
-  background: radial-gradient(circle at 50% 0%, #0190FF 36%, #ffffff 36%);
+.flying {
+  background: radial-gradient(circle at 50% 0%, #81ecec 36%, #ffffff 36%);
 }
 
-.bug {
-  background: radial-gradient(circle at 50% 0%, #26de81 36%, #ffffff 36%);
+.grass {
+  background: radial-gradient(circle at 50% 0%, #00b894 36%, #ffffff 36%);
+}
+
+.ground {
+  background: radial-gradient(circle at 50% 0%, #EFB549 36%, #ffffff 36%);
+}
+
+.ghost {
+  background: radial-gradient(circle at 50% 0%, #a55eea 36%, #ffffff 36%);
+}
+
+.ice {
+  background: radial-gradient(circle at 50% 0%, #74b9ff 36%, #ffffff 36%);
+}
+
+.normal {
+  background: radial-gradient(circle at 50% 0%, #95afc0 36%, #ffffff 36%);
+}
+
+.poison {
+  background: radial-gradient(circle at 50% 0%, #6c5ce7 36%, #ffffff 36%);
+}
+
+.psychic {
+  background: radial-gradient(circle at 50% 0%, #a29bfe 36%, #ffffff 36%);
+}
+
+.rock {
+  background: radial-gradient(circle at 50% 0%, #2d3436 36%, #ffffff 36%);
+}
+
+.water {
+  background: radial-gradient(circle at 50% 0%, #0190FF 36%, #ffffff 36%);
 }
 
 .card {
@@ -75,7 +123,7 @@ a {
 .card .card__pokenumber {
   color: black;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
 }
 .card .card__pokeimgcontainer {
@@ -190,6 +238,36 @@ a {
 }
 .card .card__poketype--water {
   background-color: #0190FF;
+}
+
+.page__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page__container .page__number {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  box-sizing: border-box;
+  width: 7rem;
+}
+.page__container .page__button {
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+  box-sizing: border-box;
+  width: 7rem;
+  padding: 0.5rem;
+  transition: ease-in-out 0.3s;
+}
+.page__container .page__button:hover {
+  cursor: pointer;
+  background-color: #D10024;
+  color: white;
+  transition: ease-in-out 0.3s;
 }
 
 /*# sourceMappingURL=Card.css.map */
