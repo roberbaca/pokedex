@@ -64,15 +64,19 @@ a {
 }
 .card .card__pokenumbercontainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 25%;
+  border-radius: 0.6rem;
+  margin-top: 5%;
+  margin-left: 70%;
 }
 .card .card__pokenumber {
-  color: white;
+  color: black;
   font-weight: 900;
   font-size: 1.2rem;
   margin: 0;
-  margin-top: 1rem;
-  margin-right: 1rem;
 }
 .card .card__pokeimgcontainer {
   display: flex;

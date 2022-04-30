@@ -1,0 +1,32 @@
+.modal__card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0;
+    z-index: 1000;
+    width: 20rem;
+    height: 40rem;
+    padding: 0.5rem;
+}
+
+
+.modal__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border-color: black;
+    padding-bottom: 0.5rem;    
+    width: 100%;
+
+    .modal__title {
+        margin: 0;
+    }
+
+    .modal__button {
+
+    }
+}
