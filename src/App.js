@@ -2,6 +2,8 @@ import './App.css';
 import Home from './pages/Home/Home'
 import Navbar from './components/Navbar/Navbar'
 import Card from './components/Card/Card'
+// import Footer from './components/Footer/Footer'
+
 /*--------------------------------------------------------------------------------
 	# Challenge SIW Cargo v1.0 - Apr 27, 2022
 	# ------------------------------------------------------------------------------
@@ -16,6 +18,7 @@ function App() {
       <Navbar></Navbar>
       <Home></Home>
       <Card></Card>
+      {/* <Footer></Footer> */}
     </div>
   );
 }

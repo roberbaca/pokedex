@@ -23,53 +23,103 @@
 }
 
 .card { 
-    width: 8rem;  
-    height: 12rem;  
+    width: 12rem;  
+    height: 20rem;  
     margin: 1rem;
-    padding: 30px 20px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    // background: radial-gradient(circle at 50% 0%, red 36%, #ffffff 36%); 
+    box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.6rem;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column;  
 
-    p {
+    .card__pokenumbercontainer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .card__pokenumber {
+        color: white;
+        font-weight: 900;
+        font-size: 1.2rem;
         margin: 0;
-        padding: 0.5rem;
-        text-transform: uppercase;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    .card__pokeimgcontainer {       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // overflow: hidden;          
     }
 
     .card__pokeimg {
-        width: 100%;
-    }
-
-    .card__pokeimg img {
-        width: 100%;
+        // width: 100%;       
         image-rendering: pixelated;
-        object-fit:cover;
-        transform: scale(1.5);
-       
+        width: 8rem;
+        // object-fit:cover;
+        //transform: scale(1.3);       
     }
 
-    .card__pokename {
+    .card__pokename h2 {
         text-align: center;
-        font-weight: 600;        
+        font-weight: 600;       
+        margin: 0; 
+        margin-bottom: 1rem;
+    }
+
+    .card__buttoncontainer {
+        // display: flex;
+        // justify-content: flex-end;
+        // align-items: center;        
     }
 
     .card__button {
-        background-color: black;
+        background: black;
         color: white;
-        border: none;
+        border: 1px solid;   
+        border-color: black;
         border-radius: 5px;
-        margin-top: 1rem;
-        font-size: 1rem;
+        margin: 0;        
+        margin-top: 2rem;
+        font-size: 0.8rem;
         padding: 0.5rem 0.8rem;
+        width: 10rem;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
     }
 
     .card__button:hover {
-        cursor: pointer;        
+        cursor: pointer;    
+        color: black; 
+        // border: 3px solid;   
+        // border-color: black;
     }
+
+    .card__button::after {
+        content: "";
+        background: white;    
+        position: absolute;
+        z-index: -1;
+        display: block;
+        transition: all 0.3s ease;    
+      }
+    
+    .card__button::after {
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);        
+    }
+    
+    .card__button:hover::after {
+        transform: skewX(-45deg) scale(1, 1);
+        transition: all 0.3s ease-out;
+    }
+
+
 
     .card__poketypecontainer {
         display: flex;
@@ -79,19 +129,75 @@
 
     .card__poketypecontainer p {
         color: white;
-        border-radius: 5px;
+        border-radius: 0.3rem;
         font-size: 0.6rem;
         width: 5rem;
+        margin: 0.1rem;
+        text-transform: uppercase;
+        padding: 0.5rem 0 0.5rem 0;
     }
 
-    .card__poketype--grass {        
-        background-color: Global.$grass;        
+    .card__poketype--bug {        
+        background-color: Global.$bug;        
+    }
+
+    .card__poketype--dragon {
+        background-color: Global.$dragon;
+    }
+    
+    .card__poketype--electric {
+        background-color: Global.$electric;
+    }
+
+    .card__poketype--fairy {
+        background-color: Global.$fairy;
+    }
+
+    .card__poketype--fighting {
+        background-color: Global.$fighting;
     }
 
     .card__poketype--fire {
         background-color: Global.$fire;
     }
 
+    .card__poketype--flying {
+        background-color: Global.$flying;
+    }
 
+    .card__poketype--grass {
+        background-color: Global.$grass;
+    }
 
+    .card__poketype--ground {
+        background-color: Global.$ground;
+    }
+
+    .card__poketype--ice {
+        background-color: Global.$ice;
+    }
+
+    .card__poketype--normal {
+        background-color: Global.$normal;
+    }
+
+    .card__poketype--poison {
+        background-color: Global.$poison;
+    }
+
+    .card__poketype--psychic {
+        background-color: Global.$psychic;
+    }
+
+    .card__poketype--rock {
+        background-color: Global.$rock;
+    }
+
+    .card__poketype--water {
+        background-color: Global.$water;
+    }
+}
+
+.card:hover {
+   
 }
