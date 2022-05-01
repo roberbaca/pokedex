@@ -27,7 +27,11 @@
 
 Features:
 
-- Show pokemon cards.
+- Show pokemon cards with basic info.
+  
+- Get more details selecting a specific pokemon and a pop-up window will show up.
+  
+- Pagination: the app shows only 10 pokemons per page.
 
 - Search bar to search pokemons by name.
 
@@ -38,6 +42,7 @@ Here’s some screenshots which demonstrates the functionality of the website I 
 
 ![pokedex](https://user-images.githubusercontent.com/83043304/166127688-c465ca78-847b-4ce2-924a-62efe339bff9.png)
 
+![modal](https://user-images.githubusercontent.com/83043304/166127767-776d7b32-ade2-45b1-b156-761be4c50f38.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
