@@ -1,5 +1,29 @@
 @use "../Global";
 
+
+.loader__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader__spinner {
+    border: 16px solid Global.$grey; 
+    border-top: 16px solid Global.$main-color; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -94,24 +118,18 @@
         color: black;
         font-weight: 900;
         font-size: 1rem;
-        margin: 0;
-        // margin-top: 1rem;
-        // margin-right: 1rem;
+        margin: 0;     
     }
 
     .card__pokeimgcontainer {       
         display: flex;
         justify-content: center;
-        align-items: center;
-        // overflow: hidden;          
+        align-items: center;                
     }
 
-    .card__pokeimg {
-        // width: 100%;       
+    .card__pokeimg {          
         image-rendering: pixelated;
-        width: 8rem;
-        // object-fit:cover;
-        //transform: scale(1.3);       
+        width: 8rem;             
     }
 
     .card__pokename h2 {
@@ -119,20 +137,14 @@
         font-weight: 600;       
         margin: 0; 
         margin-bottom: 1rem;
-    }
-
-    .card__buttoncontainer {
-        // display: flex;
-        // justify-content: flex-end;
-        // align-items: center;        
-    }
+    }   
 
     .card__button {
         background: black;
         color: white;
         border: 1px solid;   
         border-color: black;
-        border-radius: 5px;
+        border-radius: 0.4rem;
         margin: 0;        
         margin-top: 2rem;
         font-size: 0.8rem;
@@ -146,9 +158,7 @@
 
     .card__button:hover {
         cursor: pointer;    
-        color: black; 
-        // border: 3px solid;   
-        // border-color: black;
+        color: black;       
     }
 
     .card__button::after {
@@ -259,9 +269,15 @@
     .page__number {
         margin-left: 1rem;
         margin-right: 1rem;
-        font-size: 2rem;
+        font-size: 1.7rem;
+        text-align: center;
+        color: white;
         box-sizing: border-box;
-        width: 7rem;
+        padding: 0.3rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: Global.$main-color;
+        border-radius: 100%;
     }
 
     .page__button {
@@ -281,7 +297,70 @@
         background-color: Global.$main-color;
         color: white;
         transition: ease-in-out 0.3s;
+    }    
+}
+
+
+
+/* ----------------
+    Media Queries
+------------------*/
+
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+@media (min-width: 1440px) { 
+    .container {
+        padding-left: 20rem;
+        padding-right: 20rem;
     }
     
 }
 
+
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+@media (max-width: 1440px) { 
+    .container {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }        
+}
+
+
+/* Pantallas grandes (desktops de menos de 1200px) */
+@media (max-width: 1200px) { 
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }   
+}
+
+
+/* Pantallas medianas (tablets de menos de 992px) */
+@media (max-width: 992px) { 
+}
+
+
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+@media (max-width: 768px) { 
+ 
+  
+}
+
+
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 576px) { 
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }  
+  
+   
+}
+
+@media (max-width: 375px) { 
+   
+    .page__container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+     }
+    
+}

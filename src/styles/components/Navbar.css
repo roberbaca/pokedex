@@ -1,15 +1,7 @@
-/*
-
-Colors:
-	Body 		: #333
-	Headers 	: #2B2D42
-	Primary 	: #D10024
-	Dark 		: #15161D ##1E1F29
-	Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
-
-Fonts: Montserrat
-
-*/
+@charset "UTF-8";
+/*-------------
+	Colors
+--------------*/
 /*-----------------
 	Typography
 -------------------*/
@@ -19,6 +11,9 @@ body {
   color: #333;
 }
 
+/*-----------------
+	    Global
+-------------------*/
 html {
   scroll-behavior: smooth;
 }
@@ -38,11 +33,11 @@ a {
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  border-bottom: 3px solid;
+  border-bottom: 0.3rem solid;
   border-color: #D10024;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .navbar .navbar__sitelogo img {
   width: 8rem;
@@ -55,26 +50,66 @@ a {
   width: 40rem;
 }
 .navbar .navbar__searchbar .searchbar__input {
-  height: 38px;
-  padding: 0px 15px;
-  border: 1px solid #FFF;
-  border-radius: 40px 0px 0px 40px;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 2rem 0px 0px 2rem;
   background-color: #FFF;
   width: 100%;
 }
 .navbar .navbar__searchbar .searchbar__button {
-  height: 38px;
-  width: 100px;
+  height: 2.5rem;
+  width: 7rem;
   background: #D10024;
   color: #FFF;
   font-weight: 800;
   border: none;
-  border-radius: 0px 40px 40px 0px;
-  padding: 12px 12px 30px;
+  border-radius: 0 2rem 2rem 0;
+  padding: 0.5rem 0.5rem 1rem;
   text-align: center;
 }
 .navbar .navbar__searchbar .searchbar__button:hover {
   cursor: pointer;
+}
+
+/* ----------------
+    Media Queries
+------------------*/
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas extra grandes (desktops de mas de 1400px) */
+/* Pantallas grandes (desktops de menos de 1200px) */
+/* Pantallas medianas (tablets de menos de 992px) */
+/* Pantallas pequeñas (móviles en landscape de menos de 768px) */
+/* Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+@media (max-width: 576px) {
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-bottom: 1rem;
+  }
+  .navbar .navbar__sitelogo img {
+    width: 8rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .navbar .navbar__searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=Navbar.css.map */

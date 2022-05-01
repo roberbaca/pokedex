@@ -1,20 +1,12 @@
-/*
-
-Colors:
-	Body 		: #333
-	Headers 	: #2B2D42
-	Primary 	: #D10024
-	Dark 		: #15161D ##1E1F29
-	Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
-
-Fonts: Montserrat
-
-*/
+/*-------------
+	Colors
+--------------*/
 
 $background-color: rgb(21,22,29);
+$grey: rgb(223,228,234);
+$darkgrey: grey;
 $pika-color: #f1c40f;
 $main-color: #D10024;
-
 $bug: #26de81;
 $dragon: #ffeaa7;
 $electric: #fed330;
@@ -41,6 +33,10 @@ body {
     font-weight: 400;
     color: #333;
 }
+
+/*-----------------
+	    Global
+-------------------*/
 
 html {
     scroll-behavior: smooth; 

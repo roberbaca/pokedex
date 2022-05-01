@@ -3,10 +3,11 @@ import axios from "axios";
 import Modal from '../Modal/Modal'
 import '../../styles/components/Card.css';
 import '../../styles/Global.css';
+//import datos from '../../data/data.json';
 
 const Card = ({searchPokemon}) => {
 
-  const baseURL= "https://pokeapi.co/api/v2/";
+  const baseURL= "https://pokeapi.co/api/v2/pokemon";
   const limit = 150;        // maxima cantidad de pokemons a cargar de la API
   const pagination = 10;    // paginacion
   const pokemon = [];
@@ -19,24 +20,24 @@ const Card = ({searchPokemon}) => {
   const [pokeModal, setPokeModal] = useState({});   
   const [page, setPage] = useState(1);
   const [load, setLoad] = useState(false); // flag para ver si terminaron de cargar las peticiones
-  
-  console.log("buscando...", searchPokemon); // para debug
+    
+  //console.log(datos.results); // para testing, son los datos que deberia traer el fetch de getAllPokemons()
 
   const getAllPokemons = async () => {
     try {
-      const response = await axios.get(`${baseURL}pokemon?limit=${limit}`);           
-      setPokeNameList(response.data.results); 
-      getPokemonData();       
+      const response = await axios.get(`${baseURL}?limit=${limit}`);             
+      setPokeNameList(response.data.results);       
+      console.log("fetching api...");
     } catch(error){     
         console.log(error);
-    }       
-  };
+    }           
+  };  
 
 
   const getPokemonData = async () => {
     try {      
       for (let i = 0; i < limit; i++){
-        pokemon[i] = await axios.get(`${baseURL}pokemon/${pokeNameList[i].name}`);        
+        pokemon[i] = await axios.get(`${baseURL}/${pokeNameList[i].name}`);        
         pokeDescription[i] = await axios.get(pokemon[i].data.species.url);          
         pokeDescriptionEn[i] = pokeDescription[i].data.flavor_text_entries.find(d => d.language.name === "en"); // buscamos la descripcion en ingles
   
@@ -66,8 +67,7 @@ const Card = ({searchPokemon}) => {
         pokeList[i] = pokemonData;                
       } 
 
-      setPokeList(pokeList);   
-      //console.log("LISTA", pokeList);   // para debug  
+      setPokeList(pokeList);       
       setLoad(true); 
       setPokeModal(pokeList[0]);
 
@@ -83,6 +83,7 @@ const Card = ({searchPokemon}) => {
     setPokeModal(pokeList[id-1]);
     console.log("clickeaste en el pokemon #", id);
   };
+
 
   const nextPage = () => {   
     if (page < 15) {
@@ -103,12 +104,24 @@ const Card = ({searchPokemon}) => {
   };    
 
   useEffect( () => {    
-    getAllPokemons();
+    getAllPokemons();    
   }, []);
 
-  return (
-    <div>      
- 
+  useEffect( () => {    
+    getPokemonData();    
+  }, [pokeNameList]);
+
+
+  return (    
+    
+    <div>    
+    {/* Mostramos un spinner mientras se obtiene la respuesta de pokeApi */}  
+    {!load &&  
+    <div className='loader__container'>
+      <div className='loader__spinner'></div> 
+    </div>}
+    
+
    {/* Renderizamos segun numero de pagina */}
     {load && <div className='container'>     
       { searchPokemon === "" && pokeList.slice( (page - 1) * pagination, page * pagination).map( (p , index) =>           
@@ -133,7 +146,7 @@ const Card = ({searchPokemon}) => {
       )}    
 
       {/* Renderizamos segun los datos ingresados en la barra de busqueda */}
-      { searchPokemon != "" && pokeList.filter(f => f.name.toUpperCase().includes( searchPokemon.toUpperCase() )).map( (p , index) =>     
+      { load && searchPokemon != "" && pokeList.filter(f => f.name.toUpperCase().includes( searchPokemon.toUpperCase() )).map( (p , index) =>     
       
        <div className={`card ${p.types[0]}`} key={index}>     
         <div className='card__pokenumbercontainer'>
@@ -159,7 +172,7 @@ const Card = ({searchPokemon}) => {
       
       {/* Pop Ups (Modal) */}        
       <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-        <div>
+        {load && <div>
           <div className='modal__namecontainer'>
             <h3 className='modal__name'>{pokeModal.name}</h3>
             <img src={pokeModal.img} alt="pokemonImg" className='modal__img' />  
@@ -185,7 +198,7 @@ const Card = ({searchPokemon}) => {
           </div>
           <p className='modal__description'>{pokeModal.description}</p>
 
-        </div>           
+        </div>}        
       </Modal>
       
     </div>

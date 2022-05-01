@@ -10,22 +10,24 @@ const Navbar = () => {
   const searchPokemon = (e) => {
     setSearchata(e.target.value);
     console.log(searchdata);
+    console.log("buscando...", searchdata); // para debug
     return searchdata;
   }
 
   return (
     <div>
-    <div className='navbar'>
-        <div className='navbar__sitelogo'>
-            <img src={require("../../assets/logo-white.png")} alt="logo" className='sitelogo'/>
-        </div>
-        <div className='navbar__searchbar'>       
-            <input type="text" className='searchbar__input' placeholder='Search here' onChange={searchPokemon}/>
-            <button className='searchbar__button'>Search</button>
-        </div>        
-    </div>
+      <div className='navbar'>
+          <div className='navbar__sitelogo'>
+              <img src={require("../../assets/logo-white.png")} alt="logo" className='sitelogo'/>
+          </div>
+          <div className='navbar__searchbar'>       
+              <input type="text" className='searchbar__input' placeholder='Search here' onChange={searchPokemon}/>
+              <button className='searchbar__button'>Search</button>
+          </div>        
+      </div>
 
-    <Card searchPokemon={searchdata}></Card>
+      {/* Paso por params los datos ingresados en la barra de busqueda */}
+      <Card searchPokemon={searchdata}></Card>
 
     </div>
     

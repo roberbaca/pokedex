@@ -24,36 +24,3 @@ Enviar un mail a sistemas@siwcargo.com con el asunto "Entrega Ejercicio - [tu no
 El cuerpo del mensaje debe incluir:
 ● Links a los repositorios de GitLab o GitHub
 ● Explicación de cómo hacer funcionar Front
-
-
-# Brainstorming personal
-
-Hay 15 tipos diferentes de pokemon:
-
-- Bug
-- Dragon
-- Electric
-- Fighting 
-- Fire
-- Flying
-- Ghost
-- Grass 
-- Ground
-- Ice
-- Normal
-- Poison
-- Psychic
-- Rock
-- Water
-
-Colocar un navbar para seleccionar estas opciones? usar una lista desplegable?
-Subir el proyecto a Firebase
-
-
-
-# Features
-
-● React
-● Router-dom ?
-● SASS
-
